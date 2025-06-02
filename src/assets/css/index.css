@@ -16,12 +16,20 @@
 
 /* card */
 
-.card .card-shadow {
-  @apply transition duration-300 shadow-none h-full;
+.card {
+  @apply shadow-none h-full overflow-hidden inline-block rounded-xl;
 }
 
 .card:hover .card-shadow {
   @apply shadow-lg;
+}
+
+.card img {
+  transition: transform 0.3s linear;
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
 }
 
 /* overlay */
@@ -44,7 +52,7 @@
 
 .overlay .video {
   @apply absolute transform bg-blue-200 bg-no-repeat bg-center w-20 h-20 rounded-full items-center justify-center flex -translate-x-1/2 -translate-y-1/2;
-  background-image: url("../images/content/icon-play.svg#icon-play");
+  background-image: url("../images/icon-play.svg#icon-play");
   top: 50%;
   left: 50%;
 }
@@ -91,7 +99,7 @@ ul.breadcrumb li:last-child a {
 }
 
 .slider .thumbnail .item {
-  @apply bg-gray-100 relative rounded-lg mb-4 cursor-pointer;
+  @apply relative rounded-lg mb-4 cursor-pointer;
   width: 106px;
   height: 106px;
 }
@@ -134,4 +142,12 @@ a.cart.cart-filled svg g circle.dot {
 
 button[disabled] {
   @apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
+}
+
+section.not(.bg-gray-100) + section.sitemap > div {
+  @apply border-t;
+}
+
+.button-sky {
+  @apply bg-sky-500 text-white hover:bg-black hover:text-white rounded-full px-8 py-3 mt-4 inline-block flex-none transition duration-200;
 }
