@@ -54,15 +54,13 @@ function Loading({ ratio = {} }) {
 
 
 function BrowseRoom() {
-  const { data, status, error, run, isLoading, isSuccess } = useAsync({ data: { username: ""} })
+  const { data, run, isLoading } = useAsync({ data: { username: ""} })
 
   useEffect(() => {
     run(
-      fetchData({url: "/api/categories/?page=1&limit=4"})
+      fetchData({url: "/categories/?page=1&limit=4"})
     )
   }, [run])
-
-  // console.log(data)
   
   const ratioClassName = {
     wrapper: {
@@ -94,7 +92,7 @@ function BrowseRoom() {
         <div className="grid grid-rows-2 grid-cols-9 gap-4">
           {
             isLoading ? <Loading ratio={ratioClassName} /> :
-            data.data.map( (item, index) => {
+            data.map( (item, index) => {
               return <div key={item.id}
               className={`relative card ${ratioClassName?.wrapper.default?.[item.ratio.default]} ${ratioClassName?.wrapper.md?.[item.ratio.md]}`}
               style={{ height: index === 0 ? 180 : "auto" }}
