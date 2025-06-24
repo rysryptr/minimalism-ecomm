@@ -95,7 +95,8 @@ ul.breadcrumb li:last-child a {
 }
 
 .slider .thumbnail {
-  @apply w-screen order-last -mx-2 overflow-auto flex pl-4;
+  @apply w-screen order-last -mx-2 overflow-auto flex flex-col pl-4;
+  /* @apply flex flex-col gap-4 pl-4 pr-4; */
 }
 
 .slider .thumbnail .item {
