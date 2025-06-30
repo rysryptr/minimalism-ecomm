@@ -1,5 +1,5 @@
 {
-  "products" : [
+    "products" : [
     {
         "id": 1,
         "idc": 3,
@@ -396,8 +396,8 @@
             }
         ]
     }
-  ],
-  "categories": [
+    ],
+    "categories": [
     {
         "id": 1, 
         "title": "Living Room", 
@@ -438,6 +438,43 @@
             "md": "1/4"
         }
     }
-  ]
+    ],
+    "meta": 
+            {
+            "couriers": [
+                {
+                    "id": 1,
+                    "name": "Fedex",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-fedex.svg"
+                },
+                {
+                    "id": 2,
+                    "name": "DHL Express",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-dhl.svg"
+                }
+            ],
+            "payments": [
+                {
+                    "id": 1,
+                    "name": "Midtrans",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-midtrans.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Mastercard",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-mastercard.svg"
+                },
+                {
+                    "id": 3,
+                    "name": "Bitcoin",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-bitcoin.svg"
+                },
+                {
+                    "id": 2,
+                    "name": "American Express",
+                    "imgUrl": "https://luxspace-html.netlify.app/images/content/logo-american-express.svg"
+                }
+            ]
+        }
 }
 

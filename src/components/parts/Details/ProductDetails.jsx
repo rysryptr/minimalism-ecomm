@@ -51,12 +51,14 @@ export default function ProductDetails({ data }) {
 
           <button
             className="transition-all duration-200 bg-sky-500 text-white focus:bg-black focus:text-white hover:bg-sky-700 hover:text-white rounded-full px-8 py-3 mt-4 inline-flex"
-            onClick={(() => {
-              dispatch({
-                type: 'ADD_TO_CART',
-                item: data
-              })
-            })}
+            onClick={
+              () => {
+                dispatch({
+                  type: 'ADD_TO_CART',
+                  item: data
+                })
+              }
+            }
             ><svg
               className="fill-current mr-3"
               width="26"

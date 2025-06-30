@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../helpers/hooks/useGlobalContext'
 
 function Header({ theme, position }) {
-  const [toggleMainMenu, setToggleMainMenu] = useState(false)
+  // const [toggleMainMenu, setToggleMainMenu] = useState(false)
   const [isCartChanged, setIsCartChanged] = useState(false)
   const { state } = useGlobalContext()
 

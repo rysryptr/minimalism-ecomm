@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import useAsync from '../../../helpers/hooks/useAsync'
+import useForm from '../../../helpers/hooks/useForm'
+import fetchData from '../../../helpers/fetch/fetch'
 
 function ShippingCart() {
+  const { data, isLoading, run } = useAsync()
+
+  const {state: payload, funcUpdateState } = useForm({
+    completeName: "",
+    emailAddress: "",
+    adress: "",
+    phoneNumber: "",
+    courier: "",
+    payment: "",
+  })
+
+  useEffect(() => {
+    run(
+      fetchData({ url: '/meta'})
+    )
+  }, [run])
+
+  console.log(data)
   return (
     <div className="w-full md:px-4 md:w-4/12" id="shipping-detail">
       <div className="bg-gray-100 px-4 py-6 md:p-8 md:rounded-3xl">
@@ -10,7 +31,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="complete-name" className="text-sm mb-2"
+            <label htmlFor="complete-name" className="text-sm mb-2"
               >Complete Name</label>
             <input
               data-input
@@ -22,7 +43,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="email" className="text-sm mb-2">Email Address</label>
+            <label htmlFor="email" className="text-sm mb-2">Email Address</label>
             <input
               data-input
               type="email"
@@ -33,7 +54,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="address" className="text-sm mb-2">Address</label>
+            <label htmlFor="address" className="text-sm mb-2">Address</label>
             <input
               data-input
               type="text"
@@ -44,7 +65,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="phone-number" className="text-sm mb-2"
+            <label htmlFor="phone-number" className="text-sm mb-2"
               >Phone Number</label>
             <input
               data-input
@@ -56,7 +77,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="complete-name" className="text-sm mb-2"
+            <label htmlFor="complete-name" className="text-sm mb-2"
               >Choose Courier</label>
             <div className="flex -mx-2 flex-wrap">
               <div className="px-2 w-6/12 h-24 mb-4">
@@ -91,7 +112,7 @@ function ShippingCart() {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label for="complete-name" className="text-sm mb-2">Choose Payment</label>
+            <label htmlFor="complete-name" className="text-sm mb-2">Choose Payment</label>
             <div className="flex -mx-2 flex-wrap">
               <div className="px-2 w-6/12 h-24 mb-4">
                 <button
