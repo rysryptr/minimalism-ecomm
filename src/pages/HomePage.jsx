@@ -1,21 +1,17 @@
-import React from 'react'
-import Header from '../components/parts/Header'
-import Hero from '../components/parts/Hero'
-import Clients from '../components/parts/Clients'
-import Sitemap from '../components/parts/Sitemap'
-import Footer from '../components/parts/Footer'
-import BrowseRoom from '../components/parts/HomePage/BrowseRoom'
-import JustArrived from '../components/parts/HomePage/JustArrived'
+import React from "react";
+import Header from "../components/parts/Header";
+import Hero from "../components/parts/Hero";
+import Clients from "../components/parts/Clients";
+import Sitemap from "../components/parts/Sitemap";
+import Footer from "../components/parts/Footer";
+import BrowseRoom from "../components/parts/HomePage/BrowseRoom";
+import JustArrived from "../components/parts/HomePage/JustArrived";
 
-import useScrollAnchor from '../helpers/hooks/useScrollAnchor'
-import useModalDOM from '../helpers/hooks/useModalDOM'
+import DocumentWrapper from "../components/parts/DocumentWrapper";
 
 export default function HomePage() {
-  useScrollAnchor()
-  useModalDOM()
-
   return (
-    <>
+    <DocumentWrapper>
       <Header theme="white" position="absolute" />
       <Hero />
       <BrowseRoom />
@@ -23,6 +19,6 @@ export default function HomePage() {
       <Clients />
       <Sitemap />
       <Footer />
-    </>
-  )
+    </DocumentWrapper>
+  );
 }

@@ -94,8 +94,12 @@ ul.breadcrumb li:last-child a {
   @apply flex my-4 flex-col;
 }
 
+.thumbnail {
+  @apply overflow-auto;
+}
+
 .slider .thumbnail {
-  @apply w-screen order-last -mx-2 overflow-auto flex flex-col pl-4;
+  @apply order-last -mx-2 flex pl-4;
   /* @apply flex flex-col gap-4 pl-4 pr-4; */
 }
 
@@ -117,7 +121,7 @@ ul.breadcrumb li:last-child a {
 
 .slider .preview {
   @apply mb-4 px-4;
-  height: 320px;
+  height: 420px;
 }
 
 @media only screen and (min-width: 768px) {
