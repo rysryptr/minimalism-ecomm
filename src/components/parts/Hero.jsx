@@ -39,7 +39,7 @@ function Hero() {
               ></button>
             </div>
             <img
-              src="images/image-section-1.png"
+              src={`${import.meta.env.BASE_URL}images/image-section-1.png`}
               alt="hero 1"
               className="absolute inset-0 md:relative w-full h-full object-cover object-center"
             />
